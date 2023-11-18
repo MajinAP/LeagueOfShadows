@@ -38,7 +38,7 @@ resource "aws_launch_template" "app1_LT" {
     <body>
     <div>
     <h1>Malgus Clan</h1>
-    <h1>Chains Broken in Ireland</h1>
+    <h1>League of Shadows</h1>
     <p><b>Instance Name:</b> $(hostname -f) </p>
     <p><b>Instance Private Ip Address: </b> $local_ipv4</p>
     <p><b>Availability Zone: </b> $az</p>
