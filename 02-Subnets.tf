@@ -50,7 +50,7 @@ resource "aws_subnet" "private-us-east-2a" {
   availability_zone = "us-east-2a"
 
   tags = {
-    Name    = "private-eu-west-1a"
+    Name    = "private-us-east-2a"
     Service = "application1"
     Owner   = "Luke"
     Planet  = "Musafar"
