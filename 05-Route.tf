@@ -61,7 +61,7 @@ resource "aws_route_table_association" "private-us-east-2b" {
 }
 
 resource "aws_route_table_association" "public-us-east-2a" {
-  subnet_id      = aws_subnet.public-eu-west-1a.id
+  subnet_id      = aws_subnet.public-us-east-2a.id
   route_table_id = aws_route_table.public.id
 }
 
