@@ -23,7 +23,20 @@ resource "aws_lb_listener" "http" {
   port              = 80
   protocol          = "HTTP"
 
- 
+data "aws_acm_certificate" "cert" {
+  domain   = "balericamalgusADD.com"
+  statuses = ["ISSUED"]
+  most_recent = true
+}
+
+
+resource "aws_lb_listener" "https" {
+  load_balancer_arn = aws_lb.app1_alb.arn
+  port              = 443
+  protocol          = "HTTPS"
+  ssl_policy        = "ELBSecurityPolicy-2016-08"  # or whichever policy suits your requirements
+  certificate_arn   = data.aws_acm_certificate.cert.arn
+
 data "aws_acm_certificate" "cert" {
   domain   = "revanwar.com"
   statuses = ["ISSUED"]
