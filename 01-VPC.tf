@@ -6,6 +6,6 @@ resource "aws_vpc" "app1" {
     Name = "app1"
     Service = "application1"
     Owner = "MajinVegeta"
-    Planet = "PlanetVegeta"
+    Planet = "Vegeta"
   }
 }
