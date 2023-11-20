@@ -60,7 +60,13 @@ resource "aws_security_group" "app1-sg02-LB01" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
+ ingress {
+    description = "443"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
   egress {
     from_port   = 0
     to_port     = 0
@@ -71,8 +77,8 @@ resource "aws_security_group" "app1-sg02-LB01" {
   tags = {
     Name    = "app1-sg02-LB01"
     Service = "application1"
-    Owner   = "Luke"
-    Planet  = "Musafar"
+    Owner   = "MajinVegeta"
+    Planet  = "Vegeta"
   }
 
 }
