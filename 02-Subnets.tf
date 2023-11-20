@@ -1,6 +1,6 @@
 #These are   for  public
 
-resource "aws_subnet" "public-eu-west-1a" {
+resource "aws_subnet" "public-us-east-2a" {
   vpc_id                  = aws_vpc.app1.id
   cidr_block              = "10.23.1.0/24"
   availability_zone       = "us-east-2a"
@@ -14,7 +14,7 @@ resource "aws_subnet" "public-eu-west-1a" {
   }
 }
 
-resource "aws_subnet" "public-eu-west-1b" {
+resource "aws_subnet" "public-us-east-2b" {
   vpc_id                  = aws_vpc.app1.id
   cidr_block              = "10.23.2.0/24"
   availability_zone       = "us-east-1b"
