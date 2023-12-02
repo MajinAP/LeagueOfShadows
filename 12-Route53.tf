@@ -1,13 +1,13 @@
 
 data "aws_route53_zone" "main" {
-  name         = "revanwar.com"  # The domain name you want to look up
+  name         = "inthefaceofarmageddon.com"  # The domain name you want to look up
   private_zone = false
 }
 
 
 resource "aws_route53_record" "www" {
   zone_id = data.aws_route53_zone.main.zone_id
-  name    = "revanwar.com"
+  name    = "inthefaceofarmageddon.com"
   type    = "A"
 
   alias {
