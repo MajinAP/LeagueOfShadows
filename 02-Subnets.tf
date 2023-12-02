@@ -17,7 +17,7 @@ resource "aws_subnet" "public-us-east-2a" {
 resource "aws_subnet" "public-us-east-2b" {
   vpc_id                  = aws_vpc.app1.id
   cidr_block              = "10.23.2.0/24"
-  availability_zone       = "us-east-1b"
+  availability_zone       = "us-east-2b"
   map_public_ip_on_launch = true
 
   tags = {
@@ -37,6 +37,20 @@ resource "aws_subnet" "public-us-east-2c" {
 
   tags = {
     Name    = "public-us-east-2c"
+    Service = "application1"
+    Owner   = "MajinVegeta"
+    Planet  = "PlanetVegeta"
+  }
+}
+
+resource "aws_subnet" "public-us-east-2d" {
+  vpc_id                  = aws_vpc.app1.id
+  cidr_block              = "10.23.4.0/24"
+  availability_zone       = "us-east-2d"
+  map_public_ip_on_launch = true
+
+  tags = {
+    Name    = "public-us-east-2d"
     Service = "application1"
     Owner   = "MajinVegeta"
     Planet  = "PlanetVegeta"
@@ -83,3 +97,15 @@ resource "aws_subnet" "private-us-east-2c" {
     Planet  = "PlanetVegeta"
   }
 }
+
+resource "aws_subnet" "private-us-east-2d" {
+  vpc_id            = aws_vpc.app1.id
+  cidr_block        = "10.23.14.0/24"
+  availability_zone = "us-east-2d"
+
+  tags = {
+    Name    = "private-us-east-2d"
+    Service = "application1"
+    Owner   = "MajinVegeta"
+    Planet  = "PlanetVegeta"
+  }
