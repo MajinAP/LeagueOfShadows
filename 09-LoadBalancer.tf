@@ -22,7 +22,7 @@ resource "aws_lb_listener" "http" {
   load_balancer_arn = aws_lb.app1_alb.arn
   port              = 80
   protocol          = "HTTP"
-
+}
 data "aws_acm_certificate" "cert" {
   domain   = "balericamalgusADD.com"
   statuses = ["ISSUED"]
