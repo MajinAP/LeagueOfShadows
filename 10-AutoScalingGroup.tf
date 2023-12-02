@@ -6,7 +6,8 @@ resource "aws_autoscaling_group" "app1_asg" {
   vpc_zone_identifier   = [
     aws_subnet.private-us-east-2a.id,
     aws_subnet.private-us-east-2b.id,
-    aws_subnet.private-us-east-2c.id
+    aws_subnet.private-us-east-2c.id,
+    aws_subnet.private-us-east-2d.id
   ]
   health_check_type          = "ELB"
   health_check_grace_period  = 300
