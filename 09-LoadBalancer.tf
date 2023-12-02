@@ -36,9 +36,9 @@ resource "aws_lb_listener" "https" {
   protocol          = "HTTPS"
   ssl_policy        = "ELBSecurityPolicy-2016-08"  # or whichever policy suits your requirements
   certificate_arn   = data.aws_acm_certificate.cert.arn
-
+}
 data "aws_acm_certificate" "cert" {
-  domain   = "revanwar.com"
+  domain   = "inthefaceofarmageddon.com"
   statuses = ["ISSUED"]
   most_recent = true
 }
