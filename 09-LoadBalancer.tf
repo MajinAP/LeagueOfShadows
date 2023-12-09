@@ -6,7 +6,6 @@ resource "aws_lb" "app1_alb" {
   subnets            = [
     aws_subnet.public-us-east-2a.id,
     aws_subnet.public-us-east-2b.id,
-    aws_subnet.public-us-east-2c.id,
     aws_subnet.public-us-east-2c.id
   ]
   enable_deletion_protection = false
