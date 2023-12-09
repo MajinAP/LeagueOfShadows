@@ -66,11 +66,6 @@ resource "aws_route_table_association" "private_us_east_2c" {
   route_table_id = aws_route_table.private.id
 }
 
-resource "aws_route_table_association" "private_us_east_2d" {
-  subnet_id      = aws_subnet.private_us_east_2d.id
-  route_table_id = aws_route_table.private.id
-}
-
 resource "aws_route_table_association" "public_us_east_2a" {
   subnet_id      = aws_subnet.public_us_east_2a.id
   route_table_id = aws_route_table.public.id
@@ -83,10 +78,5 @@ resource "aws_route_table_association" "public_us_east_2b" {
 
 resource "aws_route_table_association" "public_us_east_2c" {
   subnet_id      = aws_subnet.public_us_east_2c.id
-  route_table_id = aws_route_table.public.id
-}
-
-resource "aws_route_table_association" "public_us_east_2d" {
-  subnet_id      = aws_subnet.public_us_east_2d.id
   route_table_id = aws_route_table.public.id
 }
