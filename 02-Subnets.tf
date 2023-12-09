@@ -43,19 +43,6 @@ resource "aws_subnet" "public-us-east-2c" {
   }
 }
 
-resource "aws_subnet" "public-us-east-2d" {
-  vpc_id                  = aws_vpc.app1.id
-  cidr_block              = "10.23.4.0/24"
-  availability_zone       = "us-east-2d"
-  map_public_ip_on_launch = true
-
-  tags = {
-    Name    = "public-us-east-2d"
-    Service = "application1"
-    Owner   = "MajinVegeta"
-    Planet  = "PlanetVegeta"
-  }
-}
 
 #these are for private
 resource "aws_subnet" "private-us-east-2a" {
@@ -98,14 +85,3 @@ resource "aws_subnet" "private-us-east-2c" {
   }
 }
 
-resource "aws_subnet" "private-us-east-2d" {
-  vpc_id            = aws_vpc.app1.id
-  cidr_block        = "10.23.14.0/24"
-  availability_zone = "us-east-2d"
-
-  tags = {
-    Name    = "private-us-east-2d"
-    Service = "application1"
-    Owner   = "MajinVegeta"
-    Planet  = "PlanetVegeta"
-  }
